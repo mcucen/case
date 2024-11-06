@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+    'task_managers' => [
+        'mock_one' => [
+            'endpoint' => env('MOCK_ONE_ENDPOINT', 'https://raw.githubusercontent.com/WEG-Technology/mock/refs/heads/main/mock-one'),
+        ],
+        'mock_two' => [
+            'endpoint' => env('MOCK_TWO_ENDPOINT', 'https://raw.githubusercontent.com/WEG-Technology/mock/refs/heads/main/mock-two'),
+        ],
+    ],
+
 ];
