@@ -35,6 +35,10 @@ class AssignTaskCommand extends Command
         $tasks = Task::all();
         $developers = Developer::all();
 
+        if ($tasks->isEmpty() || $developers->isEmpty()) {
+            return self::FAILURE;
+        }
+
         $assigner->multiAssign($tasks ,$developers);
 
         return self::SUCCESS;
