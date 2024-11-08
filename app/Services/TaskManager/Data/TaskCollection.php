@@ -42,7 +42,7 @@ class TaskCollection implements \IteratorAggregate, \Countable
         return collect($tasks)->filter(fn($task) => ! $task instanceof Task)->isEmpty();
     }
 
-    public function getTasks(): array
+    public function toArray(): array
     {
         return $this->tasks;
     }

@@ -9,9 +9,14 @@ use App\Services\TaskManager\Data\TaskCollection;
 abstract class Manager implements TaskManagerInterface
 {
     public function __construct(
-        protected readonly ResponseAdapterInterface $adapter,
+        protected ResponseAdapterInterface $adapter,
     )
     {
+    }
+
+    public function setAdapter(ResponseAdapterInterface $adapter): void
+    {
+        $this->adapter = $adapter;
     }
 
     abstract protected function rawData(): array;
